@@ -5,17 +5,17 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family: Arial, sans-serif;
 
-    background:linear-gradient(
+    background: linear-gradient(
         135deg,
-        #fdfbfb,
-        #ebedee
+        #ffe4ec,
+        #ffd6e7,
+        #fff5f7
     );
 
-    min-height:100vh;
+    min-height: 100vh;
 }
-
 .hero{
     text-align:center;
     padding:50px 20px;
