@@ -9,13 +9,14 @@ body{
 
     background: linear-gradient(
         135deg,
-        #ffe4ec,
-        #ffd6e7,
-        #fff5f7
+        #ffb6c1,
+        #ffd1dc,
+        #fff0f5
     );
 
     min-height: 100vh;
 }
+
 .hero{
     text-align:center;
     padding:50px 20px;
