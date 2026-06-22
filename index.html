@@ -1,57 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<header class="hero">
-    <h1>Floral Art Gallery</h1>
-    <p>Capturing beauty one bloom at a time</p>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Art Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
-<h1>My Art Gallery</h1>
+    <header class="hero">
+        <h1>🌸 Floral Art Gallery</h1>
+        <p>Capturing beauty one bloom at a time</p>
+    </header>
 
-<div class="card">
+    <div class="gallery">
 
-    <img src="images/art1.jpeg" alt="White Rose">
+        <div class="card">
+            <img src="images/art1.jpeg"
+                class="artwork"
+                onclick="openModal(this,
+                'White Rose',
+                '₹1,500',
+                'A delicate white rose captured in natural light.')">
 
-    <h3>White Rose</h3>
+            <h3>White Rose</h3>
+            <p>₹1,500</p>
+        </div>
 
-    <p>₹1,500</p>
+        <div class="card">
+            <img src="images/art2.jpeg"
+                class="artwork"
+                onclick="openModal(this,
+                'Rainbow Roses',
+                '₹2,000',
+                'A colorful bouquet symbolizing joy and creativity.')">
 
-    <button>View Details</button>
+            <h3>Rainbow Roses</h3>
+            <p>₹2,000</p>
+        </div>
 
-</div>
-<div class="card">
+        <div class="card">
+            <img src="images/art3.jpeg"
+                class="artwork"
+                onclick="openModal(this,
+                'Floral Symphony',
+                '₹2,500',
+                'A vibrant arrangement full of life and color.')">
 
-    <img src="images/art2.jpeg" alt="White Rose">
+            <h3>Floral Symphony</h3>
+            <p>₹2,500</p>
+        </div>
 
-    <h3>Red/Pink Rose</h3>
+        <div class="card">
+            <img src="images/art4.jpeg"
+                class="artwork"
+                onclick="openModal(this,
+                'Spring Blossom',
+                '₹2,200',
+                'Soft seasonal blooms arranged with elegance.')">
 
-    <p>₹2,000</p>
+            <h3>Spring Blossom</h3>
+            <p>₹2,200</p>
+        </div>
 
-    <button>View Details</button>
+    </div>
 
-</div>
- <div class="card">
+    <div id="modal" class="modal">
 
-    <img src="images/art3.jpeg" alt="White Rose">
+        <span class="close" onclick="closeModal()">&times;</span>
 
-    <h3>Bouquet</h3>
+        <div class="modal-content">
 
-    <p>₹3,000</p>
+            <img id="modalImage">
 
-    <button>View Details</button>
+            <h2 id="artTitle"></h2>
 
-</div>   
- <div class="card">
+            <h3 id="artPrice"></h3>
 
-    <img src="images/art4.jpeg" alt="White Rose">
+            <p id="artDescription"></p>
 
-    <h3>Bouquet Rose</h3>
+            <a
+                href="https://wa.me/9824446039"
+                target="_blank"
+                class="buy-btn">
+                Contact to Purchase
+            </a>
 
-    <p>₹3,500</p>
+        </div>
 
-    <button>View Details</button>
+    </div>
 
-</div>   
+    <script>
+
+        function openModal(image, title, price, description) {
+
+            document.getElementById("modal").style.display = "flex";
+
+            document.getElementById("modalImage").src = image.src;
+
+            document.getElementById("artTitle").innerText = title;
+
+            document.getElementById("artPrice").innerText = price;
+
+            document.getElementById("artDescription").innerText = description;
+        }
+
+        function closeModal() {
+
+            document.getElementById("modal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+
+            const modal = document.getElementById("modal");
+
+            if(event.target === modal){
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>
