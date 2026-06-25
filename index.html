@@ -1,196 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Art Gallery</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
     <!-- Navigation -->
 
     <nav class="navbar">
 
-        <h2>🌸 Floral Art Gallery</h2>
+        <div class="logo">
 
-        <ul>
+            🌸 Floral Art Gallery
 
-            <li><a href="#home">Home</a></li>
+        </div>
 
-            <li><a href="#gallery">Gallery</a></li>
+        <ul class="nav-links">
 
-            <li><a href="#artist">Artist</a></li>
+            <li><a href="#">Home</a></li>
 
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Gallery</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
 
         </ul>
 
-    </nav>
+        <a href="#" class="contact-btn">
 
-    <!-- Hero -->
+            Contact Me
 
-    <header class="hero" id="home">
-
-        <h1>Floral Art Gallery</h1>
-
-        <p>
-            Capturing beauty one bloom at a time.
-        </p>
-
-    </header>
-
-    <!-- Gallery -->
-
-    <section class="gallery" id="gallery">
-
-        <div class="card">
-
-            <img src="images/art1.jpeg"
-                 onclick="openModal(this,
-                 'White Rose',
-                 '₹1,500',
-                 'A beautiful white rose blooming in natural light.')">
-
-            <h3>White Rose</h3>
-
-            <p>₹1,500</p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/art2.jpeg"
-                 onclick="openModal(this,
-                 'Rainbow Roses',
-                 '₹2,000',
-                 'A bouquet representing happiness and creativity.')">
-
-            <h3>Rainbow Roses</h3>
-
-            <p>₹2,000</p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/art3.jpeg"
-                 onclick="openModal(this,
-                 'Floral Symphony',
-                 '₹2,500',
-                 'A colorful arrangement full of life and elegance.')">
-
-            <h3>Floral Symphony</h3>
-
-            <p>₹2,500</p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/art4.jpeg"
-                 onclick="openModal(this,
-                 'Spring Blossom',
-                 '₹2,200',
-                 'Fresh flowers celebrating the beauty of spring.')">
-
-            <h3>Spring Blossom</h3>
-
-            <p>₹2,200</p>
-
-        </div>
-
-    </section>
-
-    <!-- About Artist -->
-
-    <section class="artist" id="artist">
-
-        <h2>About the Artist</h2>
-
-        <p>
-
-            Hello! I'm Uma, a flower enthusiast who enjoys capturing
-            beautiful floral moments through photography.
-            Every flower tells a unique story, and this gallery is a
-            collection of those memorable moments.
-
-        </p>
-
-    </section>
-
-    <!-- Contact -->
-
-    <section class="contact" id="contact">
-
-        <h2>Contact Me</h2>
-
-        <p>
-            Interested in purchasing a print or collaborating?
-        </p>
-
-        <a href="https://wa.me/919427891500" target="_blank">
-            Contact on WhatsApp
         </a>
 
-    </section>
-
-    <!-- Modal -->
-
-    <div id="modal" class="modal">
-
-        <span class="close" onclick="closeModal()">&times;</span>
-
-        <div class="modal-box">
-
-            <img id="modalImage">
-
-            <h2 id="title"></h2>
-
-            <h3 id="price"></h3>
-
-            <p id="description"></p>
-
-        </div>
-
-    </div>
-
-<script>
-
-function openModal(image,title,price,description){
-
-document.getElementById("modal").style.display="flex";
-
-document.getElementById("modalImage").src=image.src;
-
-document.getElementById("title").innerHTML=title;
-
-document.getElementById("price").innerHTML=price;
-
-document.getElementById("description").innerHTML=description;
-
-}
-
-function closeModal(){
-
-document.getElementById("modal").style.display="none";
-
-}
-
-window.onclick=function(event){
-
-if(event.target==document.getElementById("modal")){
-
-closeModal();
-
-}
-
-}
-
-</script>
+    </nav>
 
 </body>
-</html>
