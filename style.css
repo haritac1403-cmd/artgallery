@@ -176,9 +176,11 @@ body{
 
     color:white;
 
-    padding:16px 34px;
+    padding:18px 40px;
 
-    border-radius:14px;
+    font-size:18px;
+
+    border-radius:16px;
 
     font-weight:bold;
 
